@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-ts-project",
+  "name": "ramda-learning",
   "version": "1.0.0",
-  "description": "",
+  "description": "Interactive Ramda tutorial",
   "main": "prod/index.js",
   "scripts": {
     "build": "npx tsc",
@@ -10,13 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zolbooo/nodejs-ts-boilerplate.git"
+    "url": "git+https://github.com/zolbooo/ramda-learning.git"
   },
   "keywords": [
+    "ramda",
     "nodejs",
     "typescript",
-    "boilerplate",
-    "eslint"
+    "javascript",
+    "functional-programming"
   ],
   "prettier": {
     "semi": true,
@@ -26,9 +27,9 @@
   "author": "Zolboobayar Gantumur <zolboobayar@nhs.edu.mn>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zolbooo/nodejs-ts-boilerplate/issues"
+    "url": "https://github.com/zolbooo/ramda-learning/issues"
   },
-  "homepage": "https://github.com/zolbooo/nodejs-ts-boilerplate#readme",
+  "homepage": "https://github.com/zolbooo/ramda-learning#readme",
   "devDependencies": {
     "@nicepack/eslint-ts": "^1.0.1",
     "@types/node": "^13.9.2",
