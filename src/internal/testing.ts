@@ -1,4 +1,4 @@
-import { last, forEach, compose, split, prop, __ } from 'ramda';
+import { last, split } from 'ramda';
 
 type TestSuite = { name: string; test: () => void };
 
@@ -27,5 +27,14 @@ export function invokeTests() {
     }
     console.log(`✅ Test "${suite.name}"`);
   };
-  forEach(compose(forEach(invokeTest), prop(__, tests)), testGroups);
+
+  testGroups.forEach((testGroup, i, arr) => {
+    console.log(`-- ${testGroup} --\n`);
+    tests[testGroup].forEach(invokeTest);
+    if (i === arr.length - 1) {
+      console.log("\n\n🎉 That's all, congratulations!");
+    } else {
+      console.log(`\n\nNice! Next section: ${arr[i + 1]}`);
+    }
+  });
 }
