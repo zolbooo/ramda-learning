@@ -4,10 +4,7 @@
   "description": "Interactive Ramda tutorial",
   "main": "prod/index.js",
   "scripts": {
-    "dev": "npx tsc-watch --onSuccess 'npm start'",
-    "build": "npx tsc",
-    "start": "node prod/index.js",
-    "test": "npx jest"
+    "start": "npx tsc-watch --onSuccess 'npm start'"
   },
   "repository": {
     "type": "git",
@@ -45,6 +42,6 @@
     "ramda": "^0.27.0"
   },
   "_moduleAliases": {
-    "@": "dist"
+    "@": "prod"
   }
 }
