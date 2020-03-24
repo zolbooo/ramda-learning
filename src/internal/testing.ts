@@ -21,10 +21,11 @@ export function invokeTests() {
     try {
       suite.test();
     } catch (err) {
-      console.error(`❌ Test "${suite.name}" was not passed`);
+      console.error(`⛔️ Test "${suite.name}" was not passed`);
       console.error(split('\n', (err as Error).stack)[1]);
       process.exit(1);
     }
+    console.log(`✅ Test "${suite.name}"`);
   };
   forEach(compose(forEach(invokeTest), prop(__, tests)), testGroups);
 }
