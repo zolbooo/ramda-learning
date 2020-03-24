@@ -4,7 +4,7 @@
   "description": "Interactive Ramda tutorial",
   "main": "prod/index.js",
   "scripts": {
-    "start": "npx tsc-watch --onSuccess 'npm start'"
+    "start": "npx tsc-watch --onSuccess 'node prod/index.js'"
   },
   "repository": {
     "type": "git",
