@@ -31,7 +31,7 @@ test('map: double array', () => {
  */
 const filterOdd = null;
 test('filter: odd numbers', () => {
-  expect(filterOdd([2, 3, 5])).toBe([2]);
+  expect(filterOdd([2, 3, 5])).toBe([3, 5]);
 });
 
 /*
@@ -41,7 +41,7 @@ test('filter: odd numbers', () => {
   TODO: reject all even numbers
  */
 const rejectEven = null;
-test('reject: event numbers', () => {
+test('reject: even numbers', () => {
   expect(rejectEven([2, 3, 5])).toBe([3, 5]);
 });
 
@@ -66,5 +66,5 @@ test('find: first divisible by 3', () => {
  */
 const findSum = null;
 test('reduce: sum of array', () => {
-  expect(findSum([2, 12, -5])).toBe(9);
+  expect(findSum(0, [2, 12, -5])).toBe(9);
 });
