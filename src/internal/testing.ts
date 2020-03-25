@@ -1,4 +1,4 @@
-import { last, split, take } from 'ramda';
+import { last, split, pipe, filter, join } from 'ramda';
 
 type TestSuite = { name: string; test: () => void };
 
@@ -16,13 +16,19 @@ export function test(name: string, testFn: () => void) {
   tests[last(testGroups)].push({ name, test: testFn });
 }
 
+const formatError = pipe(
+  split('\n'),
+  // Ignore internal stack entries, ramda stack entries, and anonymous functions
+  filter((s: string) => !/(internal|ramda\/src|anonymous)/.test(s)),
+  join('\n'),
+);
 export function invokeTests() {
   const invokeTest = (suite: TestSuite) => {
     try {
       suite.test();
     } catch (err) {
       console.error(`⛔️ Test "${suite.name}" was not passed`);
-      console.error(take(2, split('\n', (err as Error).stack)).join('\n'));
+      console.error(formatError((err as Error).stack));
       process.exit(1);
     }
     console.log(`✅ Test "${suite.name}"`);
