@@ -26,7 +26,7 @@ groupOfTests('Immutability and Objects');
 
   TODO: Get year property of object
 */
-const getYear = prop('year');
+const getYear = null;
 test('prop: Get year', () => {
   expect(getYear({ year: 1000 })).toBe(1000);
   expect(getYear({ year: 1222 })).toBe(1222);

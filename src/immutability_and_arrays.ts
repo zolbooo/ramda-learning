@@ -38,7 +38,7 @@ groupOfTests('Immutability and arrays');
 
   TODO: Get sum of 3rd (index 2) elements of arrays
  */
-const getSumOfThirdElements = pipe(map(nth(2)), reduce(add, 0));
+const getSumOfThirdElements = null;
 test('array manipulation: sum of third elements', () => {
   expect(
     getSumOfThirdElements([

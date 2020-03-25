@@ -68,7 +68,7 @@ groupOfTests('Declarative programming');
   standard arithmetic operators.
   TODO: Implement y=(3x-5)^2 math function
 */
-const mathFn = pipe(multiply(3), subtract(5), x => x ** 2);
+const mathFn = null;
 test('multiply, subtract: y=(3x-5)^2', () => {
   expect(mathFn(3)).toBe(16);
   expect(mathFn(-10)).toBe(1225);
