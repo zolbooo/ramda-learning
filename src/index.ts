@@ -4,5 +4,6 @@ import { invokeTests } from './internal/testing';
 
 import './getting_started';
 import './combining_functions';
+import './partial_application';
 
 invokeTests();
