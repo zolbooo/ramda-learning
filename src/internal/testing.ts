@@ -1,4 +1,4 @@
-import { last, split } from 'ramda';
+import { last, split, take } from 'ramda';
 
 type TestSuite = { name: string; test: () => void };
 
@@ -22,7 +22,7 @@ export function invokeTests() {
       suite.test();
     } catch (err) {
       console.error(`⛔️ Test "${suite.name}" was not passed`);
-      console.error(split('\n', (err as Error).stack)[1]);
+      console.error(take(2, split('\n', (err as Error).stack)).join('\n'));
       process.exit(1);
     }
     console.log(`✅ Test "${suite.name}"`);
