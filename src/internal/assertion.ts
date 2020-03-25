@@ -7,7 +7,11 @@ export interface Assertion {
 export function expect(value: any) {
   return {
     toBe: unless(equals(value), expected => {
-      throw Error(`Assertion failed: got ${value}, expected ${expected}`);
+      throw Error(
+        `Assertion failed: got ${JSON.stringify(
+          value,
+        )}, expected ${JSON.stringify(expected)}`,
+      );
     }),
   };
 }
