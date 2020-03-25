@@ -1,14 +1,16 @@
-/*
-  Where to Start?
-  The easiest way to start thinking functionally is to start replacing loops
-  with collection-iteration functions.
-*/
+// @ts-nocheck
 import { map, filter, reject, find, reduce } from 'ramda';
 
 import { test, groupOfTests } from '@/internal/testing';
 import { expect } from '@/internal/assertion';
 
 groupOfTests('Getting started');
+
+/*
+  Where to Start?
+  The easiest way to start thinking functionally is to start replacing loops
+  with collection-iteration functions.
+*/
 
 /*
   map applies a function to each element of an array.

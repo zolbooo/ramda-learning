@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { complement, either, both, pipe, compose } from 'ramda';
 
 import { test, groupOfTests } from '@/internal/testing';
