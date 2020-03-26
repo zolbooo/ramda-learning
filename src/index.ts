@@ -9,4 +9,6 @@ import './declarative_programming';
 import './immutability_and_objects';
 import './immutability_and_arrays';
 
+import './exercises/objects_and_functions';
+
 invokeTests();
