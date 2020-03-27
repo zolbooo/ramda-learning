@@ -15,6 +15,7 @@
     "outDir": "prod",
     "strict": false,
     "module": "CommonJS",
+    "sourceMap": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
