@@ -39,6 +39,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
+    "chalk": "^3.0.0",
     "module-alias": "^2.2.2",
     "ramda": "^0.27.0"
   },

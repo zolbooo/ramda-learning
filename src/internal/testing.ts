@@ -1,3 +1,4 @@
+import chalk from 'chalk';
 import { last, split, pipe, filter, join } from 'ramda';
 
 type TestSuite = { name: string; test: () => void };
@@ -27,11 +28,12 @@ export function invokeTests() {
     try {
       suite.test();
     } catch (err) {
-      console.error(`⛔️ Test "${suite.name}" was not passed`);
-      console.error(formatError((err as Error).stack));
+      console.error(`⛔️ Test "${chalk.cyan(suite.name)}" was not passed`);
+      console.error(chalk.red(formatError((err as Error).stack)));
+      console.error('Please fix this code to pass the exercise.');
       process.exit(1);
     }
-    console.log(`✅ Test "${suite.name}"`);
+    console.log(`✅ Test "${chalk.cyan(suite.name)}"`);
   };
 
   testGroups.forEach((testGroup, i, arr) => {
